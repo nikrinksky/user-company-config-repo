@@ -5,7 +5,7 @@ spring:
   application:
     name: user-service  # Имя сервиса для Eureka
   datasource:
-    url: jdbc:postgresql://localhost:5432/user_db  # Подключение к своей БД
+    url: jdbc:postgresql://user-db:5432/user_db  # Подключение к своей БД
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
@@ -29,7 +29,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://discovery-service:8761/eureka/
 
 
 # для проверки
@@ -46,8 +46,8 @@ feign:
 
 company:
   service:
-    url: http://localhost:8082
-#    url: http://company-service:8082
+#    url: http://localhost:8082
+    url: http://company-service:8082
 
 logging:
   level:
