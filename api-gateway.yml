@@ -15,9 +15,9 @@ spring:
           uri: lb://company-service
           predicates:
             - Path=/api/companies/**
-    config:
-      uri: http://config-service:8888
-      fail-fast: true
+#    config:
+#      uri: http://config-service:8888
+#      fail-fast: true
 
 eureka:
   client:
