@@ -1,5 +1,5 @@
 server:
-  port: 8081  # Уникальный порт для user-service
+  port: 8081  # Уникальный порт для user-service в config-repo
 
 spring:
   application:
@@ -18,13 +18,6 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
-#  cloud:
-#    loadbalancer:
-#      cache:
-#        enabled: false
-#    config:
-#      uri: http://config-service:8888
-#      fail-fast: true
 
 eureka:
   client:
@@ -44,10 +37,6 @@ feign:
         connectTimeout: 10000
         readTimeout: 60000
 
-company:
-  service:
-#    url: http://localhost:8082
-    url: http://company-service:8082
 
 logging:
   level:

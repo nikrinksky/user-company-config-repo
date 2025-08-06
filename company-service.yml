@@ -1,5 +1,5 @@
 server:
-  port: 8082  # Уникальный порт для company-service
+  port: 8082  # Уникальный порт для company-service в config-repo
 
 spring:
   application:
@@ -11,14 +11,6 @@ spring:
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 20           # Увеличьте размер пула
-  #      connection-timeout: 30000       # Таймаут подключения (ms)
-  #      leak-detection-threshold: 60000 # Обнаружение "утечек"
-  #      idle-timeout: 600000            # Макс время бездействия
-  #      max-lifetime: 1800000           # Макс время жизни соединения
-  #  cloud:
-  #    config:
-  #      uri: http://config-service:8888
-  #      fail-fast: true
 
   jpa:
     hibernate:
@@ -38,12 +30,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-service:8761/eureka/  # Регистрация в Eureka
-
-user:
-  service:
-    url: http://user-service:8081
-#    url: http://localhost:8081
-#    url: http://host.docker.internal:8081 # Для локального тестирования
 
 logging:
   level:

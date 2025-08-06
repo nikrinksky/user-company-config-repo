@@ -1,5 +1,5 @@
 server:
-  port: 8089
+  port: 8089 # Уникальный порт для api-gateway в config-repo
 
 spring:
   application:
@@ -15,9 +15,6 @@ spring:
           uri: lb://company-service
           predicates:
             - Path=/api/companies/**
-#    config:
-#      uri: http://config-service:8888
-#      fail-fast: true
 
 eureka:
   client:
