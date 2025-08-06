@@ -5,7 +5,7 @@ spring:
   application:
     name: company-service  # Имя сервиса для Eureka
   datasource:
-    url: jdbc:postgresql://company-db:5433/company_db  # Подключение к своей БД
+    url: jdbc:postgresql://company-db:5432/company_db  # Подключение к своей БД
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
