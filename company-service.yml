@@ -30,6 +30,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-service:8761/eureka/  # Регистрация в Eureka
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: ${HOSTNAME:localhost}
 
 logging:
   level:

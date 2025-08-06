@@ -20,11 +20,17 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-service:8761/eureka/
-    healthcheck:
-      enabled: true
+    register-with-eureka: true
+    fetch-registry: true
   instance:
+    prefer-ip-address: true
     hostname: ${HOSTNAME:localhost}
-    preferIpAddress: true
+
+#    healthcheck:
+#      enabled: true
+#  instance:
+#    hostname: ${HOSTNAME:localhost}
+#    preferIpAddress: true
 
 logging:
   level:
