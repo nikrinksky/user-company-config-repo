@@ -16,15 +16,15 @@ spring:
           predicates:
             - Path=/api/companies/**
 
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http://localhost:8761/eureka/
-#    register-with-eureka: true
-#    fetch-registry: true
-#  instance:
-#    prefer-ip-address: true
-#    hostname: ${HOSTNAME:localhost}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: ${HOSTNAME:localhost}
 
 #    healthcheck:
 #      enabled: true
@@ -37,12 +37,12 @@ logging:
     org.springframework.cloud.gateway: DEBUG
     org.springframework.cloud: DEBUG
 
-eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 1
-    leaseExpirationDurationInSeconds: 1
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://172.17.0.1:8761/eureka/
-    registryFetchIntervalSeconds: 1
+#eureka:
+#  instance:
+#    leaseRenewalIntervalInSeconds: 1
+#    leaseExpirationDurationInSeconds: 1
+#    prefer-ip-address: true
+#  client:
+#    service-url:
+#      defaultZone: http://172.17.0.1:8761/eureka/
+#    registryFetchIntervalSeconds: 1
